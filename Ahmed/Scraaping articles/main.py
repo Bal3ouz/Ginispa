@@ -9,6 +9,7 @@ from scrapingSites.scrapingSites.spiders.tunisienumeriqueSpider import tunisienu
 from scrapingSites.scrapingSites.spiders.KapitalisSpider import KapitalisSpider
 from scrapingSites.scrapingSites.spiders.TunivisionSpider import TunivisionSpider
 from scrapingSites.scrapingSites.spiders.radiomedSpider import radiomedSpider
+from scrapingSites.scrapingSites.spiders.babnetSpider import babnetSpider
 
 
 def main():
@@ -19,6 +20,7 @@ def main():
     })
 
     process.crawl(MosaiqueSpider, sys.argv[1])
+    #jawhara en arabe
     process.crawl(JawharaArSpider, sys.argv[1])
     process.crawl(RealitesSpider, sys.argv[1])
     process.crawl(TuniscopeSpider, sys.argv[1])
@@ -28,6 +30,8 @@ def main():
     process.crawl(KapitalisSpider, sys.argv[1])
     process.crawl(TunivisionSpider, sys.argv[1])
     process.crawl(radiomedSpider, sys.argv[1])
+    #babnet en arabe 
+    process.crawl(babnetSpider, sys.argv[1])
     process.start()
 
 
