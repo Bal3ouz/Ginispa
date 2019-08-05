@@ -16,6 +16,7 @@ def home():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    refresh=True 
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = LoginForm()
@@ -28,7 +29,8 @@ def login():
             return redirect(url_for('home'))
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
-    return render_template('index.html', title='Login', form=form)
+            refresh=False
+    return render_template('index.html', title='Login', form=form,refresh=refresh)
 
 @app.route("/logout")
 def logout():
