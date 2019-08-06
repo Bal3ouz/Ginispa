@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = '6673ffee83188cb99b4acff21ef56e03'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///login.db'
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
-#cache.init_app(app)
+cache.init_app(app)
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)

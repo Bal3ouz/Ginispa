@@ -7,11 +7,31 @@ from flask_login import login_user, current_user, logout_user, login_required
 
 
 
-@app.route("/")
-@app.route("/home")
+@app.route("/", methods=['GET', 'POST'])
+@app.route("/home", methods=['GET', 'POST'])
+@login_required
 def home():
-    #home will be the client interface
-    return "<h1>Hello user </h1>"
+    return render_template('home.html',user=current_user,name="home")
+
+@app.route("/infos", methods=['GET', 'POST'])
+@login_required
+def infos():
+    return render_template('infos.html',user=current_user,name="infos")
+
+@app.route("/heatmap", methods=['GET', 'POST'])
+@login_required
+def heatmap():
+    return render_template('heatmap.html',user=current_user,name="heatmap")
+
+@app.route("/news", methods=['GET', 'POST'])
+@login_required
+def news():
+    return render_template('news.html',user=current_user,name="news")
+
+@app.route("/contact_us", methods=['GET', 'POST'])
+@login_required
+def contact_us():
+    return render_template('contact_us.html',user=current_user,name="contact_us")
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -30,7 +50,7 @@ def login():
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
             refresh=False
-    return render_template('index.html', title='Login', form=form,refresh=refresh)
+    return render_template('index.html', title='Login', form=form,refresh=refresh,name="login")
 
 @app.route("/logout")
 def logout():
