@@ -31,28 +31,38 @@
 	
 	<div class="limiter">
 		<div class="container-login100">
+			
+
+
 			<div class="wrap-login100 p-t-85 p-b-20">
 				<form class="login100-form validate-form" method="POST" action="">
 					{{ form.hidden_tag() }}
 					<span class="login100-form-title p-b-70">
 						Welcome To GenispAI
 					</span>
-					<span class="login100-form-avatar">
+					<span class="login100-form-avatar p-b-200">
 						<img src="{{url_for('static',filename='images/cropped-AI.png')}}" alt="LOGO">
 					</span>
-
-					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-						
-						{% if form.username.errors %}
-						{{ form.username(class="input100") }}
-						<div class="invalid-feedback">
-							{% for error in form.email.errors %}
-							<span>{{ error }}</span>
-							{% endfor %}
+					<span class="login100">
+						{% if refresh==False %}
+						{% with messages = get_flashed_messages(with_categories=true) %}
+						{% if messages %}
+						{% for category, message in messages %}
+						<div class="alert alert-{{ category }}">
+							{{ message }}
 						</div>
-						{% else %}
-						{{form.username(class="input100")}}
-						{% endif%}
+						{% endfor %}
+						{% endif %}
+						{% endwith %}
+						{% endif %}
+						{% set refresh=True %}
+					</span>
+
+					<div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter username">
+						
+						
+						{{form.username(class="input100",value="")}}
+						
 
 						<span class="focus-input100" data-placeholder="Username"></span>
 					</div>
