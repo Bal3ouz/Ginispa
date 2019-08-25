@@ -1,0 +1,27 @@
+aiblue
+{
+  color: #00d8ff;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link 
+{
+    color: #00d8ff;
+}
+.navbar-dark .navbar-brand {
+    color: #00d8ff;
+}
+a {
+    color: #00d8ff;
+   }
+.navbar.navbar-dark .breadcrumb .nav-item.active>.nav-link, .navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
+    color: #00d8ff;
+}
+.pagination .page-item.active .page-link {
+    transition: all .2s linear;
+    border-radius: .125rem;
+    background-color: #00d8ff;
+    color: #fff;
+}
+.btn-ai {
+    background-color: #00d8ff!important;
+    color: #fff;
+}

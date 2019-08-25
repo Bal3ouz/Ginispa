@@ -1,0 +1,97 @@
+{% extends "base_form.html" %}
+{% block content%}
+<form class="login100-form validate-form" method="POST" action="">
+	{{ form.hidden_tag() }}
+	<span class="login100-form-title p-b-70">
+		Welcome To GenispAI
+	</span>
+	<span class="login100-form-avatar p-b-200">
+		<img src="{{url_for('static',filename='images/cropped-AI.png')}}" alt="LOGO">
+	</span>
+	<span class="login100">
+		{% if refresh==False %}
+		{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+		{% for category, message in messages %}
+		<div class="alert alert-{{ category }}">
+			{{ message }}
+		</div>
+		{% endfor %}
+		{% endif %}
+		{% endwith %}
+		{% endif %}
+		{% set refresh=True %}
+	</span>
+
+	<div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter username">
+
+
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="input100") }}
+                    {% endif %}
+
+
+		<span class="focus-input100" data-placeholder="Username"></span>
+	</div>
+	<div class="wrap-input100 validate-input m-t-35 m-b-35" data-validate = "Enter username">
+
+		{% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+		{{form.email(class="input100",value="")}}
+		{% endif%}
+
+
+		<span class="focus-input100" data-placeholder="email"></span>
+	</div>
+
+	<div class="wrap-input100 validate-input m-b-35" data-validate="Enter password">
+		{% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+		{{form.password(class="input100",type="password")}}
+		{% endif %}
+
+		<span class="focus-input100" data-placeholder="Password"></span>
+	</div>
+	<div class="wrap-input100 validate-input m-b-35" data-validate="Enter password">
+		
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+		{{form.confirm_password(class="input100",type="password")}}
+		{% endif %}
+
+		<span class="focus-input100" data-placeholder="Confirm password"></span>
+	</div>
+
+
+	<div class="container-login100-form-btn">
+		{{ form.submit(class="login100-form-btn") }}
+	</div>
+
+
+</form>
+{% endblock %}

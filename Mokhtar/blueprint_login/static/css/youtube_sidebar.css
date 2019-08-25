@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 2000px;
+  background-color: #ddd;
+  font-size: 0.8em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-outer-container {
+  padding: 1em 1.5em;
+  background-color: #fff;
+  width: 230px;
+  border-right: 1px solid #ccc;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  overflow-y: hidden;
+}
+.nav-outer-container:hover {
+  overflow-y: scroll;
+}
+
+.nav-main-sections-container {
+  list-style-type: none;
+}
+
+.nav-main-section-links {
+  background-color: white;
+}
+
+.nav-main-section-link {
+  list-style-type: none;
+}
+
+.nav-main-section-link-a {
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  display: block;
+  padding: 0.5em;
+}
+.nav-main-section-link-a:hover {
+  background-color: #666666;
+  color: #fff;
+}
+.nav-main-section-link-a:hover .nav-link-numbers,
+.nav-main-section-link-a:hover .icon {
+  color: #fff;
+}
+.nav-main-section-link-a:focus {
+  background-color: #990000;
+  color: #fff;
+}
+.nav-main-section-link-a:focus .nav-link-numbers,
+.nav-main-section-link-a:focus .icon {
+  color: #fff;
+}
+.nav-main-section-link-a .link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link-icon,
+.nav-link-img {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link-img > img {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.icon {
+  font-size: 1.5em;
+  color: #555;
+}
+
+.nav-link-text {
+  width: 80%;
+  padding: 0 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #999999;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-main-section-header {
+  font-size: 1em;
+  margin: 0.2em 0;
+  padding: 0.5em;
+}
+
+.nav-main-section-header-a {
+  text-decoration: none;
+  color: #990000;
+}
+.nav-main-section-header-a:hover {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
