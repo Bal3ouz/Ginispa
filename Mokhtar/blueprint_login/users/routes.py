@@ -5,6 +5,7 @@ from blueprint_login.models import User
 from blueprint_login.users.log import  LoginForm
 from blueprint_login.users.reg import  RegistrationForm
 from flask_login import login_user, current_user, logout_user, login_required
+from blueprint_login.ml.utils import  create_instance
 
 users = Blueprint('users', __name__)
 
@@ -20,6 +21,7 @@ def login():
             login_user(user, remember=form.remember.data)
             #next_page = request.args.get('next')
             #return redirect(next_page) if next_page else redirect(url_for('home'))
+            create_instance()
             return redirect(url_for('main.home'))
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')

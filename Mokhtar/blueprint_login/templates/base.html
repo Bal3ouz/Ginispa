@@ -29,7 +29,9 @@
 <body>
 <!------ Include the above in your HEAD tag ---------->
 
+{% block custom_navbar%}
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark aiblue">
+  {% endblock %}
   <a class="navbar-brand" href="#">Genispai</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -99,7 +101,7 @@
 {% endblock %}
 
 
-<footer class="footer bg-dark text-light ab-b-l ">
+<footer class="footer bg-dark text-light ">
     <div class="container bg-dark">
       
       <div class="row">
@@ -124,6 +126,7 @@
       </div>  
     </div>
   </footer>	
+
 	 <script type="text/javascript" src="{{url_for('static',filename='vendor/mdb/js/jquery-3.4.1.min.js')}}"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="{{url_for('static',filename='vendor/mdb/js/popper.min.js')}}"></script>
