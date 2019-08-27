@@ -14,7 +14,8 @@
  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/mdb/css/addons/datatables.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/main.css')}}">
 
-	
+	{% block css %}
+  {% endblock %}
 	
 	
     
@@ -137,5 +138,7 @@
   <script src="{{url_for('static',filename='js/main.js')}}"></script>
   <!-- MDBootstrap Datatables  -->
 <script type="text/javascript" src="{{url_for('static',filename='vendor/mdb/js/addons/datatables.min.js')}}"></script>
+{% block js %}
+  {% endblock %}
 </body>
 </html>

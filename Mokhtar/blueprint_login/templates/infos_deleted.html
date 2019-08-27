@@ -23,7 +23,7 @@
                     <div class="row">
                       <div class="col-4">
                         <button class="btn btn-ai btn-block dropdown-toggle btn-md" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Available articles</button>
+                        aria-haspopup="true" aria-expanded="false">Deleted articles</button>
 
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="{{url_for('main.infos')}}">Available articles</a>
@@ -91,8 +91,8 @@
 
         <td>
           <a href="{{ data.at[ind,'lien'] }}"><button type="button" class="btn btn-ai btn-rounded btn-sm m-0 btn-block">Read more</button></a>
+          <a href="{{url_for('main.return_element',name=name)}}?ind={{ind}}"><button type="button" class="btn btn-warning btn-block btn-rounded btn-sm m-0">Return </button></a>
           
-          <a href="{{url_for('main.delete_element',name=name)}}?ind={{ind}}"><span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm m-0 btn-block">Delete </button></span></a>
           <a href="{{url_for('main.save_element',name=name)}}?ind={{ind}}"><button type="button" class="btn btn-success btn-block btn-rounded btn-sm m-0">Save </button></a>
 
         </td>
