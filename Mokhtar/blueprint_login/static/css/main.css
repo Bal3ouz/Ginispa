@@ -12,6 +12,10 @@
 a {
     color: #00d8ff;
    }
+.list-group .active a{
+  color: white;
+}
+
 .navbar.navbar-dark .breadcrumb .nav-item.active>.nav-link, .navbar.navbar-dark .navbar-nav .nav-item.active>.nav-link {
     color: #00d8ff;
 }
@@ -25,8 +29,16 @@ a {
     background-color: #00d8ff!important;
     color: #fff;
 }
+.list-group-item.active {
+    color: #fff;
+    background-color: #00d8ff;
+    border-color: #00d8ff;
+}
 
-
+.navbar {
+    width: 100%;
+    
+}
 
 .m-t-50{
     margin-top: 100px;
@@ -44,7 +56,7 @@ header,
   body,
   header,
   .view {
-    height: 1000px;
+    height: 100%;
   }
 }
 @media (min-width: 800px) and (max-width: 850px) {
@@ -52,7 +64,7 @@ header,
   body,
   header,
   .view {
-    height: 600px;
+    height: 100%;
   }
 }
 
