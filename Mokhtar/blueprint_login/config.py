@@ -11,4 +11,8 @@ import os
 class Config:
 	SECRET_KEY = '6673ffee83188cb99b4acff21ef56e03'
 	SQLALCHEMY_DATABASE_URI = 'sqlite:///login.db'
-
+	MAIL_SERVER='smtp.googlemail.com'
+	MAIL_PORT=587
+	MAIL_USE_TLS=True
+	MAIL_USERNAME="mami.mokhtar123@gmail.com"
+	MAIL_PASSWORD="(1f2k3u4h5a6c7k8e9r)"

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{%block content%}
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" action="#!">
+
+    
+
+    <!-- Subject -->
+    <label>Subject</label>
+    <select class="browser-default custom-select mb-4 ">
+        <option value="" disabled>Choose option</option>
+        <option value="1" selected>Feedback</option>
+        <option value="2">Report a bug</option>
+        <option value="3">Other</option>
+        
+    </select>
+
+    <!-- Message -->
+    <div class="form-group" >
+        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"style="height: 60%" ></textarea>
+    </div>
+
+    <!-- Copy -->
+    <div class="custom-control custom-checkbox mb-4" style="height: 5%">
+        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+        <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+    </div>
+
+    <!-- Send button -->
+    <button class="btn btn-info btn-block" type="submit">Send</button>
+
+</form>
+<!-- Default form contact -->
+{%endblock%}
