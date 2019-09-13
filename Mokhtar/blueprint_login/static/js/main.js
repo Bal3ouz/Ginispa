@@ -8,6 +8,19 @@ targets: 3
 });
 $('.dataTables_length').addClass('bs-select');
 });
+$(document).ready(function(){
+  var test1=$(".dropdown-toggle").css("width");
+  var test2=$(".dropdown-menu").css("width",test1);
+
+  $(".dropdown-toggle").click(function()
+  {
+
+    test1=$(".dropdown-toggle").css("width");
+    test2=$(".dropdown-menu").css("width",test1);
+  })
+
+  })
+
 
 
 

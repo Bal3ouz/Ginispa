@@ -25,10 +25,7 @@ def heatmap():
 def news():
     return render_template('news.html',user=current_user,name="news")
 
-@main.route("/contact_us", methods=['GET', 'POST'])
-@login_required
-def contact_us():
-    return render_template('contact_us.html',user=current_user,name="contact_us")
+
 
 @main.route("/yt", methods=['GET', 'POST'])
 def yt():
