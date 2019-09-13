@@ -4,7 +4,7 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from blueprint_login.config import Config
 from flask_caching import Cache
-
+from flask_mail import Mail
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()

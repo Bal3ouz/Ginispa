@@ -8,6 +8,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationE
 
 
 
+
 class FeedbackForm(FlaskForm):
     message = StringField('Message', widget=TextArea())
     feedback = SelectField(

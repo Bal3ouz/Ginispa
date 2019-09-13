@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {%block content%}
 <!-- Default form contact -->
-<form class="text-center border border-light p-5" action="#!">
+<form class="text-center border border-light p-5" action="#" method="POST">
 
-    
+    {{ form.hidden_tag() }}
 
 
     <!-- Subject -->
